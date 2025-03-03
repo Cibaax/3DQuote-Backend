@@ -3,7 +3,7 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
-const { Client } = pkg;
+const { Client } = pkg;  // Asegúrate de que esta línea está presente
 
 const client = new Client({
   host: process.env.DB_HOST,
@@ -11,7 +11,7 @@ const client = new Client({
   password: process.env.DB_PASSWORD,
   database: process.env.DB_NAME,
   port: process.env.DB_PORT,
-  ssl: { rejectUnauthorized: false } // Necesario para conexiones seguras con Supabase
+  ssl: { rejectUnauthorized: false }
 });
 
 client.connect()
