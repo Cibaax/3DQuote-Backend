@@ -1,4 +1,5 @@
-import { Client } from "pg";
+import pkg from "pg";
+const { Client } = pkg;
 
 const client = new Client({
   host: process.env.DB_HOST,
