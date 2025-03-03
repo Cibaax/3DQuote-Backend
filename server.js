@@ -120,7 +120,6 @@ app.get("/project-summary/:id", async (req, res) => {
 
         const projectSummary = result.rows[0];
 
-        // Convertir el tiempo total de minutos a formato "hh:mm"
         const totalMinutes = parseInt(projectSummary.total_time, 10) || 0;
         const hours = Math.floor(totalMinutes / 60);
         const minutes = totalMinutes % 60;
